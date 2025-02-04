@@ -1,9 +1,16 @@
+using Microsoft.AspNetCore.HttpsPolicy;
+using ZipLink.Presentation.Middleware;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<ReDirectMiddleware>();
 
 var app = builder.Build();
+
+app.UseMiddleware<ReDirectMiddleware>();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
