@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.HttpsPolicy;
+using ZipLink.Infrastructure;
+using ZipLink.Infrastructure.Database;
 using ZipLink.Presentation.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<ReDirectMiddleware>();
+
+builder.Services.AddInfrastructureSetup();
+builder.Services.AddDatabaseSetup(builder.Configuration);
 
 var app = builder.Build();
 
