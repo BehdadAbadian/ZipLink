@@ -4,6 +4,7 @@ public interface ILinkRepository
     public Task CreateAsync(Link link);
     public Task UpdateAsync(Link link);
     public Task DeleteAsync(Guid id);
+    public Task<string> GetOrginalLinkAsync(string shortLink);
     public Task<Link> GetAsync(Guid id);
     public Task<List<Link>> GetAllByUser(Guid userId);
     public Task<List<Link>> GetAllLinks();

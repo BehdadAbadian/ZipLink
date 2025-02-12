@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ZipLink.Application\ZipLink.Application.csproj" />
     <ProjectReference Include="..\ZipLink.Infrastructure.Database\ZipLink.Infrastructure.Database.csproj" />
     <ProjectReference Include="..\ZipLink.Infrastructure\ZipLink.Infrastructure.csproj" />
   </ItemGroup>

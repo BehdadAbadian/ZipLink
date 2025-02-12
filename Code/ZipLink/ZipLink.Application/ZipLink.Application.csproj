@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Link\Command\" />
+    <Folder Include="Link\Query\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZipLink.Application.Contracts\ZipLink.Application.Contracts.csproj" />
+    <ProjectReference Include="..\ZipLink.Domain\ZipLink.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

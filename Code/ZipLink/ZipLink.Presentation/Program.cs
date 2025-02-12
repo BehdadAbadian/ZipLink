@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.HttpsPolicy;
+using ZipLink.Application;
 using ZipLink.Infrastructure;
 using ZipLink.Infrastructure.Database;
 using ZipLink.Presentation.Middleware;
@@ -11,6 +12,7 @@ builder.Services.AddScoped<ReDirectMiddleware>();
 
 builder.Services.AddInfrastructureSetup();
 builder.Services.AddDatabaseSetup(builder.Configuration);
+builder.Services.AddServiceSetup();
 
 var app = builder.Build();
 
