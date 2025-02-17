@@ -8,5 +8,6 @@ public static class ServiceSetup
     public static void AddServiceSetup(this IServiceCollection service)
     {
         service.AddTransient<IRedirectService, RediretService>();
+        service.AddTransient<IStatisticService, StatisticService>();
     }
 }

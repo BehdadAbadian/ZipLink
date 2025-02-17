@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ZipLink.Application.Contracts\ZipLink.Application.Contracts.csproj" />
     <ProjectReference Include="..\ZipLink.Domain\ZipLink.Domain.csproj" />
+    <ProjectReference Include="..\ZipLink.Infrastructure\ZipLink.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

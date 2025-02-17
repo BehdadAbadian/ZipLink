@@ -42,6 +42,16 @@ public class LinkRepository : ILinkRepository
         throw new NotImplementedException();
     }
 
+    public async Task<Guid> GetLinkIdWithPath(string path)
+    {
+        if (await _context.Links.AnyAsync(x => "/" + x.ShortLink == path))
+        {
+            return await _context.Links.Where(x => "/" + x.ShortLink == path).Select(x => x.Id).FirstOrDefaultAsync();
+        }
+        else { return Guid.Empty; }
+    }
+    
+
     public async Task<string> GetOrginalLinkAsync(string shortLink)
     {
         //var c = await _context.Links.ToListAsync();

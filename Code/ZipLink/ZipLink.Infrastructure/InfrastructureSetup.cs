@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.CompilerServices;
 using ZipLink.Domain.Link;
+using ZipLink.Domain.Statistic;
 using ZipLink.Infrastructure.Pattern;
 using ZipLink.Infrastructure.Repository;
 
@@ -12,6 +13,7 @@ public static class InfrastructureSetup
     {
         service.AddTransient<IUnitOfwork, UnitOfwork>();
         service.AddTransient<ILinkRepository, LinkRepository>();
+        service.AddTransient<ILinkStatisticRepository, LinksStatisticRepository>();
 
     }
 }

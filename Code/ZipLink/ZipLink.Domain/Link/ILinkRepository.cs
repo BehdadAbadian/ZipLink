@@ -10,7 +10,5 @@ public interface ILinkRepository
     public Task<List<Link>> GetAllLinks();
     public Task<bool> LinkExitsById(Guid id);
     public Task<bool> CheckGeneratedShortLink(string shortLink);
-
-
-
+    Task<Guid> GetLinkIdWithPath(string path);
 }
